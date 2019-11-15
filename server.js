@@ -16,9 +16,9 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-app.get('/hello', function(req, res) {
-  res.json({ greetings: 'Hello, API' });
-});
+// app.get('/hello', function(req, res) {
+//   res.json({ greetings: 'Hello, API' });
+// });
 
 app.post('/api/fileanalyse', upload.single('upfile'), (req, res, next) => {
   const file = req.file;
